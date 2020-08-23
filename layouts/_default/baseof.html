@@ -8,7 +8,7 @@
 	{{- block "main" . }}{{- end }}
 	{{- partial "footer.html" . -}}
 
-	{{- if .IsHome -}}
+	{{- if (and (.Site.Params.addons.netlifycms) .IsHome) -}}
 	<script>
 		if (window.netlifyIdentity) {
 		  window.netlifyIdentity.on("init", user => {
