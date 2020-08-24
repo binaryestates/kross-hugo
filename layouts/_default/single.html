@@ -13,6 +13,9 @@
           <div class="content">
             {{.Content }}
           </div>
+          {{- if site.Params.addons.comments -}}
+            {{- template "_internal/disqus.html" . -}}
+          {{- end -}}
         </div>
       </div>
     </div>
